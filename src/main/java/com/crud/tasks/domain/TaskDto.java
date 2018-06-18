@@ -9,4 +9,7 @@ public class TaskDto {
     private long id;
     private String title;
     private String content;
+
+    public TaskDto() {
+    }
 }
