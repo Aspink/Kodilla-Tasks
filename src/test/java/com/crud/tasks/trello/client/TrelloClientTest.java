@@ -89,4 +89,17 @@ public class TrelloClientTest {
         assertEquals("http://test.com", newCard.getShortUrl());
     }
 
+    @Test
+    public void shouldReturnEmptyList() throws URISyntaxException {
+        // Given
+        URI uri = new URI("http://test.com/members/adamszymanski5/boards?key=test&token=test&fields=name,id&lists=all");
+
+        when(restTemplate.getForObject(uri, TrelloBoardDto[].class)).thenReturn(null);
+
+        // When
+        List<TrelloBoardDto> fetchedTrelloBoards = trelloClient.getTrelloBoards();
+
+        // Then
+        assertEquals(0, fetchedTrelloBoards.size());
+    }
 }
