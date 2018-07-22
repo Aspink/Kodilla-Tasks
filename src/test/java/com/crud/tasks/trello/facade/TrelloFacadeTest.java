@@ -63,6 +63,7 @@ public class TrelloFacadeTest {
         assertEquals(0, trelloBoardDtos.size());
     }
 
+    @Test
     public void shouldFetchTrelloBoards() {
         //Given
         List<TrelloListDto> trelloLists = new ArrayList<>();
