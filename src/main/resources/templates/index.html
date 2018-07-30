@@ -11,7 +11,13 @@
     <br></br>
     <!--/*@thymesVar id="one" type="com.crud.task.controller.StaticWebPageController"*/-->
     <!--/*@thymesVar id="two" type="com.crud.task.controller.StaticWebPageController"*/-->
-    <span th:text="2*2="></span>
+    <span th:text="${two_mul_two} + ${equal}"></span>
     <span th:text="${two} * ${two}"></span>
+    <br></br>
+    <span th:text="${two_mul_two} + ${sum} + ${two} + ${equal}"></span>
+    <span th:text="${two} * ${two} + ${two}"></span>
+    <br></br>
+    <span th:text="${two} + ${sub} + ${two_mul_two} + ${equal}"></span>
+    <span th:text="${two} - ${two} * ${two}"></span>
 </body>
 </html>
